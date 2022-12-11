@@ -1,5 +1,5 @@
-#!/bin/bash
 #include <studio.h>
+
 /**
  * main - Empty
  * Return: Always
