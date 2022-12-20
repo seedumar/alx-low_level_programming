@@ -9,11 +9,12 @@ nclude "main.h"
 
 void _puts(char *str)
 {
-	int c;
+	int i = 0;
 
-	for (c = 0; str[c] != '\0'; c++)
+	while (str[i])
 	{
-	_putchar(str[index]);
+		_putchar(str[i]);
+		i++;
 	}
 	_puchar('\n');
 }
