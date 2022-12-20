@@ -1,14 +1,19 @@
 nclude "main.h"
 
 /**
- * _puts - Write te character c to stdout
- * @str: The character to print
+ * _puts - write a function that prints a string, followed by a new line
  *
- * Return: On success 1,
- * On error, -1 is returned
+ * @str: This is my input string
+ *
  */
 
 void _puts(char *str)
 {
-	return (write(1, &str, 1));
+	int c;
+
+	for (c = 0; str[c] != '\0'; c++)
+	{
+	_putchar(str[index]);
+	}
+	_puchar('\n');
 }
