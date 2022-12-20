@@ -2,33 +2,24 @@
 
 /**
  * puts_half - prints a string, followed by a new line,
- * @str: pointer to the string to print
- * Return: void
+ * @str: pointer to char
+ *  Return: nothing
  */
 
 void puts_half(char *str)
 {
-	int len, n, i;
+	int i = 0;
+	int n = 0;
 
-	len = 0;
-	
-	while (str[len] != '\0');
+	while (str[i] != '\0')
+		i += 1;
+	n = i / 2;
+	if (i % 2 == 1)
+		n += 1;
+	while (str[n] != '\0')
 	{
-		len++;
-	}
-	if (len % 2 == 0)
-	{
-		for (i = len / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-	}
-	else if (len % 2)
-	{
-		for (n = (len - 1) / 2; n < len - 1; i++)
-		{
-			_putchar(str[n + 1]);
-		}
+		_putchar(*(str + n));
+		n++;
 	}
 	_putchar('\n');
 }
