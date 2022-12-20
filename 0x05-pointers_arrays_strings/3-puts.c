@@ -1,14 +1,14 @@
 nclude "main.h"
 
 /**
- * _putchar - Write te character c to stdout
- * @c: The caracter to print
+ * _puts - Write te character c to stdout
+ * @str: The character to print
  *
  * Return: On success 1,
  * On error, -1 is returned
  */
 
-void _putchar(char c)
+void _puts(char *str)
 {
-	return (write(1, &c, 1));
+	return (write(1, &str, 1));
 }
