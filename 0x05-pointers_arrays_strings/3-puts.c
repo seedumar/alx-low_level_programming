@@ -1,13 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * puts - write a function that prints a string, followed by a new line
+ * _puts - write a function that prints a string, followed by a new line
  *
  * @str: This is my input string
  *
  */
 
-void puts(char *str)
+void _puts(char *str)
 {
 	int c = 0;
 
