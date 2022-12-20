@@ -1,17 +1,14 @@
 nclude "main.h"
 
 /**
- * _putchar - Write a function that prints a string. followed by a new line, to stdout
- * @str: This is my input string
+ * _putchar - Write te character c to stdout
+ * @c: The caracter to print
+ *
+ * Return: On success 1,
+ * On error, -1 is returned
  */
 
-void _putchar(char *str)
+void _putchar(char c)
 {
-	int index;
-
-	for (index = 0; str[index] != '\0'; index++)
-	{
-		_putchar(str[index]);
-	}
-	_putchar('\n');
+	return (write(1, &c, 1));
 }
