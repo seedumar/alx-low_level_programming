@@ -17,3 +17,4 @@ int _strlen(char *s)
 	index++;
 	)
 	return (index);
+}
