@@ -1,13 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * file: main.h
- * Auth: sam tech(Umar Saeed)
- * Desc: Header file containing protypes for all functions
- * Used in the 0x0. C - More pointers, arrays ND STRINGS DIRECTORY.
- */
-
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
