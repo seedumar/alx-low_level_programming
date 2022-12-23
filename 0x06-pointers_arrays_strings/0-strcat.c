@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- * strcat - Concatenates the string pointed to by @src, including the terminat
- *          null byte, to the end of the string pointed to by @dest.
- * @dest: Apointer to the string to be concatenated upon.
- * @src: The source string to be apppended to @dest.
- *
- * Return: A pointer to the destination string @dest.
+ * strcat - Concatenates two strings
+ * @dest: copy to
+ * @src: copy from
+ * Return: pointer to dest.
  */
 char *strcat(char *dest, char *src)
 {
