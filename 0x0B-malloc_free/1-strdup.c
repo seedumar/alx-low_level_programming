@@ -1,23 +1,29 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - check the code for Holberton School students.
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
  *
- * Return: Always 0.
+ * Return: pointer of an array of chars
  */
-int main(void)
+char *_strdup(char *str)
 {
-    char *s;
+	char *strout;
+	unsigned int i, j;
 
-    s = _strdup("Holberton");
-    if (s == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    printf("%s\n", s);
-    free(s);
-    return (0);
+	if (str == NULL)
+		return (NULL);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
+		return (NULL);
+
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }

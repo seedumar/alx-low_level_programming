@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "main.h"
+#include "magn.h"
 
 /**
  * str_concat - concatenate two numbers
