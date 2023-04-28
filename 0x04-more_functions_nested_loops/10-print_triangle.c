@@ -8,24 +8,28 @@
 
 void print_triangle(int size)
 {
-	int start = 0, end = size, count;
-
 	if (size <= 0)
-		_puchar('\n');
-	else
 	{
-		for (count = 0; count < end; count++)
+		_putchar('\n');
+	} else
+	{
+		int i, j;
+
+		for (i = 1; i <= size; i++)
 		{
-			while (start < end)
+			for (j = i; j < size; j++)
 			{
-				if ((start + count + 1) >= end)
-					_putchar('#');
-				else
-					_putchar(' ');
-				start++;
+				_putchar(' ');
 			}
-			start = 0;
+
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
+
 			_putchar('\n');
 		}
 	}
 }
+Footer
+© 2023 Git
