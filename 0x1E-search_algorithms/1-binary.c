@@ -4,42 +4,31 @@
  * @array: array to search on
  * @size: array size
  * @value: search arrayvalue
- * Return: found value index or -1 on fail
-*/
+ * Return: found value index
+ */
+
 int binary_search(int *array, size_t size, int value)
 {
-	size_t start = 0, end = size, mid, i;
+	size_t i, left, right;
 
-	while (start < end)
+	if (array == NULL)
+		return (-1);
+
+	for (left = 0, right = size - 1; right >= left;)
 	{
 		printf("Searching in array: ");
-		for (i = start; i < end - 1; i++)
+		for (i = left; i < right; i++)
 			printf("%d, ", array[i]);
-		printf("%d\n", array[end - 1]);
+		printf("%d\n", array[i]);
 
-		mid = midpoint(start, end);
-		if (array[mid] == value)
-			return (mid);
-		else if (array[mid] > value)
-			end = mid;
+		i = left + (right - left) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			right = i - 1;
 		else
-			start = mid + 1;
+			left = i + 1;
 	}
-	return (-1);
-}
-/**
- * midpoint - function to find midpoint of two numbers
- * @start: the lower number
- * @end: the higher number
- * Return: the midpoint num
-*/
-size_t midpoint(size_t start, size_t end)
-{
-	int num = start + end;
 
-	if (num % 2 == 0)
-		num = num / 2 - 1;
-	else
-		num = num / 2;
-	return (num);
+	return (-1);
 }
